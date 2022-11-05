@@ -1,9 +1,9 @@
 import React from "react";
-
-const StoryList = ({story}) => {
+import Story from "./Story";
+const StoryList = ({stories}) => {
     //turn from obj 
-    const storyListComp = story.map((s) => {
-        return <li>{s.title}</li>
+    const storyListComp = stories.map((story, i) => {
+      return (<Story key={i} details={story} position={i+1} />);
     });
     return (
        <>
